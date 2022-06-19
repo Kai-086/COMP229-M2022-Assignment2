@@ -1,0 +1,32 @@
+<!--
+    File Name: content.ejs
+    Student's Name: Kai-Pang Hung
+    Student ID: 301207607
+    Date: June-19-2022
+--> 
+<div class="container">
+    <div class="title">
+        <h1><%= title %></h1>
+        <hr />
+    </div>
+    
+    <div style="width: 60%; margin: auto;">
+        <form enctype="text/plain" accept-charset="utf-8">
+            <input id="name" type="text" name="Name" value-size="60" placeholder="Your Name" required>
+            <input id="email" type="email" name="Email" value-size="60" placeholder="Email" required>
+            <input id="subject" type="text" name="Subject" value-size="60" placeholder="Subject" required>
+            <textarea id="content" type="text" name="Content" cols="40" rows="20" aria-required="true"
+                aria-invalid="false" placeholder="Content" required></textarea>
+        </form>
+
+        <div>
+            <button id="email_btn">
+                <a id="mailTo"></a>
+                <!--back to home page-->
+                <a href="/">Sent</a>
+            </button>
+            
+        </div>
+        
+    </div>
+</div>
