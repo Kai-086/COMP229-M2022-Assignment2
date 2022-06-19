@@ -8,5 +8,8 @@ const router = express_1.default.Router();
 const Util_1 = require("../Util");
 const business_contacts_1 = require("../Controllers/business-contacts");
 router.get('/business-contacts', Util_1.AuthGuard, business_contacts_1.DisplayBusinessContacts);
+router.get('/business-edit/:id', Util_1.AuthGuard, business_contacts_1.DisplayBusinessContacts);
+router.post('/business-edit/:id', Util_1.AuthGuard, business_contacts_1.DisplayBusinessContacts);
+router.get('/business-delete/:id', Util_1.AuthGuard, business_contacts_1.DisplayBusinessContacts);
 exports.default = router;
 //# sourceMappingURL=business-contacts.js.map

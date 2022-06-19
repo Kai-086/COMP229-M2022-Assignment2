@@ -9,4 +9,14 @@ import { DisplayBusinessContacts } from '../Controllers/business-contacts';
 // If not, go back to login page
 router.get('/business-contacts', AuthGuard, DisplayBusinessContacts);
 
+// Update
+/* Display */
+router.get('/business-edit/:id', AuthGuard, DisplayBusinessContacts);
+/* Process */
+router.post('/business-edit/:id', AuthGuard, DisplayBusinessContacts);
+
+// Delete
+/* Display */
+router.get('/business-delete/:id', AuthGuard, DisplayBusinessContacts);
+
 export default router;

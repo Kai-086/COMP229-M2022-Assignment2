@@ -164,22 +164,22 @@ form {
 
 /*  id in form */
 #name {
-    width: 300px;
+    width: 49.7%;
     height: 36px;
     font-size: 16px;
     background: #dfe7ff;
-    display: block;
+    display: inline;
     border: 2px solid Transparent;
     border-radius: 5px;
     margin: 10px auto 10px;
 }
 
 #email {
-    width: 300px;
+    width: 49.7%;
     height: 36px;
     font-size: 16px;
     background: #dfe7ff;
-    display: block;
+    display: inline-block;
     border: 2px solid Transparent;
     border-radius: 5px;
     margin: 10px auto 10px;
@@ -220,6 +220,13 @@ form {
     cursor: pointer;
     margin: 10px auto 50px;
 }
+
+/* id in business list */
+#businessedit, #businessdelete{
+    width: 70px;
+    text-align: center;
+}
+
 
 .input-group-addon:first-child
 {

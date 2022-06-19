@@ -1,0 +1,66 @@
+<!--
+    File Name: business-edit.ejs
+    Student's Name: Kai-Pang Hung
+    Student ID: 301207607
+    Date: June-19-2022
+-->
+
+<div class="container">
+    <div class="title">
+        <h1><%= title %></h1>
+        <hr />
+    </div>
+    
+    <!--Format From Login Page-->
+    <div class="offset-md-3 col-md-6 col-sm-12">
+ 
+          <!-- Message Area -->
+          <% if(messages.length > 0) { %>
+          <div id="messageArea" class="alert alert-danger">
+            <%= messages %>
+          </div>
+          <% } %>
+  
+          <form method="POST" id="loginForm" novalidate>
+            <div class="form-group mb-2">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-user">
+                  </i>
+                </span>
+                <input type="text" class="form-control" id="name" name="name" required value=""
+                  placeholder="Enter contact name">
+              </div>
+  
+            </div>
+  
+            <div class="form-group mb-2">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-lock">
+                  </i>
+                </span>
+                <input type="text" class="form-control" id="number" name="number" required value=""
+                  placeholder="Enter contact number">
+              </div>
+
+              <div class="form-group mb-2">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="fa fa-lock">
+                    </i>
+                  </span>
+                  <input type="text" class="form-control" id="email" name="email" required value=""
+                    placeholder="Enter Email address">
+                </div>
+            </div>
+
+            <div class="text-end">
+              <button id="editBtn" type="submit" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-check fa-lg"></i> Update</button>
+              <button id="cancelButton" type="cancel" class="btn btn-warning btn-lg">
+                <i class="fa-solid fa-xmark fa-lg"></i> Cancel</button>
+            </div>
+          </form>
+        </div>
+</div>
