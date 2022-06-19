@@ -1,0 +1,26 @@
+{
+    "businessContacts":
+    [
+        {
+            "Name": "Kai",
+            "Number": "647-000-0001",
+            "Email": "Kai@example.com"
+        },
+        {
+            "Name": "Alan",
+            "Number": "647-000-0002",
+            "Email": "Alan@example.com"
+
+        },
+        {
+            "Name": "Justin",
+            "Number": "647-000-0003",
+            "Email": "Justin@example.com"
+        },
+        {
+            "Name": "Wayne",
+            "Number": "647-000-0004",
+            "Email": "Wayne@example.com"
+        }
+    ]
+}

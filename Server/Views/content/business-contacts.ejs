@@ -15,18 +15,18 @@
                     <tr>
                         <th scope="col" class="text-center">#</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Phone</th>
+                        <th scope="col">Phone Number</th>
                         <th scope="col">Email</th>
                     </tr>
                 </thead>
                 <tbody id="businessList">
                     <!-- Repeatable Rows -->
-                    <% for(let count = 0; count < business.length; count++) { %>
+                    <% for(let count = 0; count < businessContacts.length; count++) { %>
                     <tr>
                         <th scope="row" class="text-center"><%= count + 1 %></th>
-                        <td><%= business[count].Name %></td>
-                        <td><%= business[count].Number %></td>
-                        <td><%= business[count].Email %></td>
+                        <td><%= businessContacts[count].Name %></td>
+                        <td><%= businessContacts[count].Number %></td>
+                        <td><%= businessContacts[count].Email %></td>
                     </tr>
                     <% } %>
                 </tbody>

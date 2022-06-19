@@ -37,7 +37,7 @@
             <a class="nav-link" <%= (page == 'contact') ? 'active' : ''; %> aria-current="page" href="/contact"><i class="fa-solid fa-comment-sms fa-lg"></i>Contact Me</a>
           </li>
   
-          <!-- Not show movie-list page and logout page when doesn't login -->
+          <!-- Not show business-list page and logout page when doesn't login -->
           <% if(displayName) { %>
           <li class="nav-item">
             <a class="nav-link" <%= (page == 'business-contacts') ? 'active' : ''; %> aria-current="page" href="/business-contacts"><i class="fa-solid fa-address-book fa-lg"></i>

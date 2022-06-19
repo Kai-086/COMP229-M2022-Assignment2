@@ -10,7 +10,7 @@ const BusinessSchema = new Schema({
     Email: String
 },
 {
-    collection: "businessContact"
+    collection: "businessContacts"
 });
 
 // Step 3 - Create a Model using the Schema

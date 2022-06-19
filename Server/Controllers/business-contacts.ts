@@ -10,6 +10,6 @@ export function DisplayBusinessContacts(req: express.Request, res: express.Respo
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'Business Contacts List', page: 'business-contacts', business: businessCollection, displayName: UserDisplayName(req) });
+        res.render('index', {title: 'Business Contacts List', page: 'business-contacts', businessContacts: businessCollection, displayName: UserDisplayName(req) });
     });
 }
