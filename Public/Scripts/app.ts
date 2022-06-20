@@ -31,4 +31,4 @@
 
     window.addEventListener("load", Start);
 
-})();
+});

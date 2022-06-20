@@ -6,61 +6,39 @@
 -->
 
 <div class="container">
-    <div class="title">
-        <h1><%= title %></h1>
-        <hr />
-    </div>
-    
-    <!--Format From Login Page-->
-    <div class="offset-md-3 col-md-6 col-sm-12">
- 
-          <!-- Message Area -->
-          <% if(messages.length > 0) { %>
-          <div id="messageArea" class="alert alert-danger">
-            <%= messages %>
-          </div>
-          <% } %>
-  
-          <form method="POST" id="loginForm" novalidate>
-            <div class="form-group mb-2">
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="fa fa-user">
-                  </i>
-                </span>
-                <input type="text" class="form-control" id="name" name="name" required value=""
-                  placeholder="Enter contact name">
-              </div>
-  
-            </div>
-  
-            <div class="form-group mb-2">
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="fa fa-lock">
-                  </i>
-                </span>
-                <input type="text" class="form-control" id="number" name="number" required value=""
-                  placeholder="Enter contact number">
-              </div>
+  <div class="title">
+    <h1><%= title %></h1>
+    <hr />
+  </div>
 
-              <div class="form-group mb-2">
-                <div class="input-group">
-                  <span class="input-group-addon">
-                    <i class="fa fa-lock">
-                    </i>
-                  </span>
-                  <input type="text" class="form-control" id="email" name="email" required value=""
-                    placeholder="Enter Email address">
-                </div>
-            </div>
-
-            <div class="text-end">
-              <button id="editBtn" type="submit" class="btn btn-primary btn-lg">
-                <i class="fa-solid fa-check fa-lg"></i> Update</button>
-              <button id="cancelButton" type="cancel" class="btn btn-warning btn-lg">
-                <i class="fa-solid fa-xmark fa-lg"></i> Cancel</button>
-            </div>
-          </form>
+  <div style="width: 40%; height: 100%; margin: auto;">
+    <form method="POST" id="loginForm" novalidate>
+      <div class="form-group mb-2">
+        <div class="input-group">
+          <input type="text" class="form-control" id="name" name="name" value="<%= businessContacts.Name%>" required>
         </div>
+
+      </div>
+
+      <div class="form-group mb-2">
+        <div class="input-group">
+          <input type="text" class="form-control" id="number" name="number" value="<%= businessContacts.Number%>" required>
+        </div>
+
+      </div>
+      <div class="form-group mb-2">
+        <div class="input-group">
+          <input type="text" class="form-control" id="email" name="email" value="<%= businessContacts.Email%>" required>
+        </div>
+        <div class="text-end">
+          <button id="updateBtn" type="submit" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-check fa-lg"></i> Update</button>
+          <button id="cancelBtn" type="cancel" class="btn btn-warning btn-lg">
+            <i class="fa-solid fa-xmark fa-lg"></i> Cancel</button>
+            <a href="/business-contacts/business-delete/<%= businessContacts._id %>" type="button"
+              id="businessdelete"><i class="fa-solid fa-trash-can fa-lg"></i></a></td>
+        </div>
+    </form>
+  </div>
+
 </div>

@@ -23,17 +23,17 @@ function DisplayBusinessEdit(req, res, next) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Business Contacts List', page: 'business-contacts', businessContacts: businessCollection, displayName: (0, Util_1.UserDisplayName)(req) });
+        res.render('index', { title: 'Edit Business Contacts Information', page: 'business-edit', businessContacts: businessCollection, displayName: (0, Util_1.UserDisplayName)(req) });
     });
 }
 exports.DisplayBusinessEdit = DisplayBusinessEdit;
 function ProcessBusinessEdit(req, res, next) {
     let id = req.params.id;
     let newContact = new business_1.default({
-        _id: id,
-        Name: req.body.Name,
-        Number: req.body.Number,
-        Email: req.body.Email
+        "_id": id,
+        "Name": req.body.Name,
+        "Number": req.body.Number,
+        "Email": req.body.Email
     });
     business_1.default.updateOne({ _id: id }, newContact, function (err) {
         if (err) {

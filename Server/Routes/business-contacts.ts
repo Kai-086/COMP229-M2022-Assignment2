@@ -17,6 +17,6 @@ router.post('/business-edit/:id', AuthGuard, ProcessBusinessEdit);
 
 // Delete
 /* Display */
-router.get('/business-delete/:id', AuthGuard, ProcessBusinessDelete);
+router.get('/business-contacts/business-delete/:id', AuthGuard, ProcessBusinessDelete);
 
 export default router;

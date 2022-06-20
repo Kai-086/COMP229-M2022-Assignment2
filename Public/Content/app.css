@@ -163,7 +163,7 @@ form {
 }
 
 /*  id in form */
-#name {
+#name, #email, #number {
     width: 49.7%;
     height: 36px;
     font-size: 16px;
@@ -173,18 +173,6 @@ form {
     border-radius: 5px;
     margin: 10px auto 10px;
 }
-
-#email {
-    width: 49.7%;
-    height: 36px;
-    font-size: 16px;
-    background: #dfe7ff;
-    display: inline-block;
-    border: 2px solid Transparent;
-    border-radius: 5px;
-    margin: 10px auto 10px;
-}
-
 
 #subject {
     width: 100%;
@@ -224,6 +212,11 @@ form {
 /* id in business list */
 #businessedit, #businessdelete{
     width: 70px;
+    text-align: center;
+}
+
+#updateBtn, #cancelBtn {
+    width: 150px;
     text-align: center;
 }
 

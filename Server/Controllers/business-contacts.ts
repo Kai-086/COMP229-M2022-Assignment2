@@ -12,7 +12,7 @@ export function DisplayBusinessContacts(req: express.Request, res: express.Respo
             res.end(err);
         }
         res.render('index', {title: 'Business Contacts List', page: 'business-contacts', businessContacts: businessCollection, displayName: UserDisplayName(req) });
-    /*
+        /*
         @https://stackoverflow.com/questions/4299991/how-to-sort-in-mongoose
      */
     }).sort({Name: 1}); // Sort by names alphabetically
@@ -32,7 +32,7 @@ export function DisplayBusinessEdit(req: express.Request, res: express.Response,
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'Business Contacts List', page: 'business-contacts', businessContacts: businessCollection, displayName: UserDisplayName(req) });
+        res.render('index', {title: 'Edit Business Contacts Information', page: 'business-edit', businessContacts: businessCollection, displayName: UserDisplayName(req) });
     });
 }
 
@@ -41,10 +41,10 @@ export function ProcessBusinessEdit(req: express.Request, res: express.Response,
     // Instantiate a new user object
     let id = req.params.id;
     let newContact = new Business({
-        _id: id,
-        Name: req.body.Name,
-        Number: req.body.Number,
-        Email: req.body.Email
+        "_id": id,
+        "Name": req.body.Name,
+        "Number": req.body.Number,
+        "Email": req.body.Email
     });
 
     /*
