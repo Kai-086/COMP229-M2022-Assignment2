@@ -44,15 +44,15 @@ export function ProcessBusinessEdit(req: express.Request, res: express.Response,
      */
     let id = req.params.id;
     let newContact = new Business({
-        "_id": id,
-        "Name": req.body.Name,
-        "Number": req.body.Number,
-        "Email": req.body.Email
+        _id: id,
+        Name: req.body.name,
+        Number: req.body.number,
+        Email: req.body.email
     });
-    console.log(newContact._id);
-    console.log(req.body.Name);
-    console.log(req.body.Number);
-    console.log(req.body.Email);
+    //console.log(newContact._id);
+    //console.log(req.body.name);
+    //console.log(req.body.number);
+    //console.log(req.body.email);
 
     /*
         @https://mongoosejs.com/docs/api.html#document_Document-updateOne
