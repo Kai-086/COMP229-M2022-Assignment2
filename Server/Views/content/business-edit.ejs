@@ -33,10 +33,13 @@
         <div class="text-end">
           <button id="updateBtn" type="submit" class="btn btn-primary btn-lg">
             <i class="fa-solid fa-check fa-lg"></i> Update</button>
-          <button id="cancelBtn" type="cancel" class="btn btn-warning btn-lg">
-            <i class="fa-solid fa-xmark fa-lg"></i> Cancel</button>
+           <a href="/business-contacts/" type="button" class="btn btn-warning btn-lg"
+              id="cancelBtn"><i class="fa-solid fa-xmark fa-lg"></i> Cancel</a>
+              <!--
+              <button id="cancelBtn" type="cancel" class="btn btn-warning btn-lg">
+            <i class="fa-solid fa-xmark fa-lg"></i> Cancel</button>-->
             <a href="/business-contacts/business-delete/<%= businessContacts._id %>" type="button"
-              id="businessdelete"><i class="fa-solid fa-trash-can fa-lg"></i></a></td>
+              id="businessdelete"><i class="fa-solid fa-trash-can fa-lg"></i></a>
         </div>
     </form>
   </div>
