@@ -35,6 +35,10 @@ function ProcessBusinessEdit(req, res, next) {
         "Number": req.body.Number,
         "Email": req.body.Email
     });
+    console.log(newContact._id);
+    console.log(req.body.Name);
+    console.log(req.body.Number);
+    console.log(req.body.Email);
     business_1.default.updateOne({ _id: id }, newContact, function (err) {
         if (err) {
             console.error(err);
@@ -55,4 +59,7 @@ function ProcessBusinessDelete(req, res, next) {
     });
 }
 exports.ProcessBusinessDelete = ProcessBusinessDelete;
+function _id(_id, id) {
+    throw new Error('Function not implemented.');
+}
 //# sourceMappingURL=business-contacts.js.map

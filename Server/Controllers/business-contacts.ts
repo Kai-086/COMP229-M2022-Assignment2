@@ -39,6 +39,9 @@ export function DisplayBusinessEdit(req: express.Request, res: express.Response,
 /* Process business contact edit page */
 export function ProcessBusinessEdit(req: express.Request, res: express.Response, next: express.NextFunction) {
     // Instantiate a new user object
+    /*
+        @https://www.geeksforgeeks.org/mongodb-updateone-method-db-collection-updateone/ 
+     */
     let id = req.params.id;
     let newContact = new Business({
         "_id": id,
@@ -46,11 +49,16 @@ export function ProcessBusinessEdit(req: express.Request, res: express.Response,
         "Number": req.body.Number,
         "Email": req.body.Email
     });
+    console.log(newContact._id);
+    console.log(req.body.Name);
+    console.log(req.body.Number);
+    console.log(req.body.Email);
 
     /*
         @https://mongoosejs.com/docs/api.html#document_Document-updateOne
+        @https://mongoosejs.com/docs/api.html#model_Model.update
      */
-    Business.updateOne({_id: id}, newContact, function(err: Callback) {
+    Business.updateOne({_id: id}, newContact, function(err: CallbackError) {
         if(err) {
             console.error(err);
             res.end(err);
@@ -74,4 +82,8 @@ export function ProcessBusinessDelete(req: express.Request, res: express.Respons
         // Success
         res.redirect('/business-contacts');
     });
+}
+
+function _id(_id: any, id: string) {
+    throw new Error('Function not implemented.');
 }
